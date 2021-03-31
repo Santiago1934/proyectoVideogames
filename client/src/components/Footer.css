@@ -1,0 +1,11 @@
+.contenedorFooter {
+    position: fixed;
+    background-color: #02131C;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedorFooter p {
+    color: white;
+}

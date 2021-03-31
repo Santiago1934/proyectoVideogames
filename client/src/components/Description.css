@@ -1,0 +1,40 @@
+.contains {
+    background: linear-gradient(to bottom, black, rgb(34, 34, 34));
+    height: 100;
+    color: white;
+    zoom: 3;
+}
+
+.info {
+    display: inline-block;
+    text-align: left;
+    margin-left: 3rem;
+    margin-top: -44rem;
+    padding-bottom: 7rem;
+}
+
+.titlename {
+    font-size: 50px;
+}
+
+.fecha {
+    font-size: 20px;
+    margin-top: -2rem;
+    margin-left: 8px;
+}
+
+.titulos{
+    margin-top: 5rem;
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+
+.imagen {
+    margin-left: 46rem;
+    margin-top: 3rem;
+    border-radius: 3px;
+    max-width: 500px;
+    min-height: 300px;
+}
+
