@@ -1,0 +1,26 @@
+.contenedorFooter {
+    position: fixed;
+    background-color: #02131C;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedorFooter p {
+    color: white;
+}
+
+@media (max-width: 648px) { 
+    .contenedorFooter {
+        position: relative;
+        background-color: #02131C;
+        text-align: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .contenedorFooter p {
+        color: white;
+    }
+
+}

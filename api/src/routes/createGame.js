@@ -15,7 +15,7 @@ var array = ["action", "shooter"]
 
 server.post("/add", (req, res) => {
     const {plataforms, genres} = req.body
-    console.log("estoy agregando el juego")
+    
   
     const plataform = Object.keys(plataforms);
     //Arreglo con los nombres de los generos que tiene el juego

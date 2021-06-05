@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {connect} from "react-redux";
 import { Link } from "react-router-dom";
-import { getDescription } from "../actions";
+import { getDescription } from "../../actions";
 import "./Description.css"
 
 
@@ -43,28 +43,48 @@ const Description = (props) => {
     
     return (
         <div className="contains">
-            <header className="headerSearch">
-                <Link className="linkGame " to="/" style={{textDecoration:"none"}}><p className="title">Henry Videogames</p></Link>
-                <Link className="linkAddGame"  to="/games">Games</Link>
-            </header>
+
+            <div className="headerDescription">
+                <Link className="titleDescription " to="/" style={{textDecoration:"none"}}>XGames</Link>
+            </div>
+
+        <div className="containerInfo">
+
+            <div className="containerImgDescription">
+
                 <img className="imagen" src={detail.image ? detail.image : "https://lh3.googleusercontent.com/S2r9QoTmnX43lLk7L0cOW6is-w-5ONswpXXi5GaxjLovGMdOaMwYk9ZBB9RqWHPW16ya=s170"} 
-                height="180px" width="500px" alt="not found"></img>
+                height="100%" width="100%" alt="not found"></img>
+
                 <img className="imagen" src={detail.imageAdi ? detail.imageAdi : "https://lh3.googleusercontent.com/S2r9QoTmnX43lLk7L0cOW6is-w-5ONswpXXi5GaxjLovGMdOaMwYk9ZBB9RqWHPW16ya=s170"} 
-                height="300px"width="500px" alt="not found"></img>
-            <div className="info">
-                <h1 className="titlename">{detail.name}</h1>
-                <h5 className="fecha" >Fecha de lanzamiento:<span style={{fontWeight:"400", marginLeft:"1rem"}}>{detail.launch ? detail.launch.slice(0,10): <></>}</span></h5>
-                <h5 className="fecha" >Rating:<span style={{fontWeight:"400", marginLeft:"1rem"}}>{detail.rating}</span></h5>
-                <h5 className="titulos">Genero / s</h5>
-                {detail.genre && typeof detail.genre[0] === "number" ?  generos.slice(0, generos.length - 1).filter((el, i) => detail.genre.find(el => el === i)) :
-                  detail.genre ? detail.genre.map(el => <span key={idKey()} style={{fontWeight:"500", marginLeft:"6px"}}> {el.name} </span>): <p></p>}
-                <h5 className="titulos">Plataforma / s</h5>
-                {detail.plataforms ? detail.plataforms.map(el => <span key={idKey()} style={{fontWeight:"500", paddingLeft:"6px"}}> {el.platform ? el.platform.name : el}</span>): <p></p>}
-                <h5 className="titulos">Descripcion</h5>
-                <p style={{marginRight:"50rem", fontSize:"19px"}}>{detail.description}</p>
-                
+                height="100%"width="100%" alt="not found"></img>
+
             </div>
             
+            <div className="info">
+                <h1 className="titleName">{detail.name}</h1>
+                <h5 className="borderr">Fecha de lanzamiento:<span style={{fontWeight:"400", marginLeft:"1rem"}}>{detail.launch ? detail.launch.slice(0,10): <></>}</span></h5>
+                <h5 className="borderr">Rating:<span style={{fontWeight:"400", marginLeft:"1rem"}}>{detail.rating}</span></h5>
+                
+                <div className="containePlatforms">
+                     <h5 className="borderr"> Genero / s</h5>
+                
+                     <div  className="platforms">{detail.genre && typeof detail.genre[0] === "number" ?  generos.slice(0, generos.length - 1).filter((el, i) => detail.genre.find(el => el === i)) :
+                         detail.genre ? detail.genre.map(el => <span style={{margin:"5px", marginLeft:"0"}} key={idKey()} > {el.name} </span>): <p></p>}</div>
+                
+                </div>
+
+                <div className="containerPlatforms">
+                    <h5 className="borderr" >Plataforma / s</h5>
+                    <div >{detail.plataforms ? detail.plataforms.map(el => <span style={{margin:"5px", marginLeft:"0"}} key={idKey()} > {el.platform ? el.platform.name : el}</span>): <p></p>}</div>
+                </div>
+
+                <h5 className="borderr" >Descripcion</h5>
+                <p className="description" style={{marginTop:"2px",  width: "80%"}}>{detail.description}</p>
+                
+            </div>
+        
+            </div>
+
         </div>
     )
 }

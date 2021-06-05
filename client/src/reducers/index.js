@@ -1,16 +1,17 @@
-import { gamesAdded } from "../actions";
+
 
 const initialState = {
     games: [],
     gameSearch: [],
     gameDetail: {},
-    gamesAdded: [],
     genres: false,
     gamesFilter: [],
     next: "",
 }
 
 export const rootReducer =(state = initialState, action) => {
+
+
     switch(action.type){
         case "GET_GAMES":
             return {
@@ -20,6 +21,15 @@ export const rootReducer =(state = initialState, action) => {
                 gameSearch:[],
                 gamesFilter:[]
             }
+
+
+        case "GET_GAME_ADDED":
+            return {
+                ...state,
+                games: state.games.concat(action.payload)
+            }
+
+
         case "ORDER_ALPHABETIC":
              if(state.gamesFilter.length){
                 return {
@@ -62,6 +72,8 @@ export const rootReducer =(state = initialState, action) => {
                       return 0;
                 }})
             }}
+
+
 
         case "ORDER_RATING":
             if(state.gamesFilter.length){
@@ -110,11 +122,12 @@ export const rootReducer =(state = initialState, action) => {
         case "FILTER_GENRE": 
                  return{
                     ...state,
-                    gamesFilter: action.payload !== "By Default ---" ? state.games.slice(0, state.games.length - 1)
+                    gamesFilter: action.payload !== "All ---" ? state.games.slice(0, state.games.length - 1)
                     .filter(el => el.genres && el.genres.length ? el.genres.find(el => el.name === action.payload) : <></>):
                     [],
-                    gameSearch:[]
+                    gameSearch:[],
                 }
+
 
 
         case "FILTER_BY_GAME_ADDED":
@@ -129,18 +142,14 @@ export const rootReducer =(state = initialState, action) => {
                     gamesFilter: state.games.slice(0, state.games.length - 1).filter(el => el.id[0] === "s")
                 }}
 
+
+
          case "GET_SEARCH_GAME": 
                 return {
                     ...state,
-                gameSearch: action.payload ? action.payload : [],
+                gameSearch: action.payload ,
                 gamesFilter: []
             };
-
-        case "GAME_ADDED": 
-            return {
-                ...state,
-            gamesAdded: action.payload
-        };
 
 
 
@@ -149,13 +158,6 @@ export const rootReducer =(state = initialState, action) => {
                 ...state,
                 gameDetail: action.payload
             };
-
-        case "GET_GAME_ADDED":
-            return {
-                ...state,
-                gamesFilter:  state.games.slice(0, state.games.length - 1).filter(el => {var index = el ; action.payload.find(el => el.id === index)})
-                 !== undefined  ? state.gamesFilter.concat(action.payload) : <></> 
-            }
 
 
 

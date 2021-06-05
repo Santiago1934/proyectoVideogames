@@ -1,0 +1,215 @@
+body {
+    height: 140vh;
+}
+
+.contains {
+    height: 120vh;
+    color: white;
+    background: linear-gradient(to bottom, #5d5674, #392e5c);
+
+}
+
+/*  .info {
+    height: 36rem;
+    margin-top: 2rem;
+} */
+
+.headerDescription {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 3rem;
+    padding: 0.3rem;
+    background-color: black;
+}
+
+.titleDescription {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #dddddd;
+    font-size: 1.7rem;
+}
+.containerInfo {
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row-reverse;
+}
+
+.info {
+    position: relative;
+    width: 90%;
+    left: 3rem;
+}
+
+.description {
+        font-size: 2vh;
+}
+
+.containerImgDescription {
+    width: 50%;
+    float:right;
+    height: 20rem;
+    margin-right: 2rem;
+    height: 18rem;
+}
+
+.imagen {
+    margin-top: 0.6rem;
+}
+
+.borderr {
+    font-size: 1rem;
+}
+
+/* .containerImgDescription {
+    width: 30%;
+    float:right;
+    height: 20rem;
+    margin-right: 2rem;
+    height: 18rem;
+} */
+
+/* .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.imagen {
+    margin-top: 0.6rem;
+}
+
+.titleName {
+    font-size: 5vh;
+    margin: 0;
+}
+
+.date {
+    font-size: 2vh;
+}
+
+.containerPlatforms {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.platforms {
+    font-size: 2vh;
+    display: flex;
+    margin-top: -.7rem;
+}
+ */
+ 
+
+@media (max-width: 648px) {
+
+    .contains {
+        height: fit-content;
+        width: 100%;
+    }
+    .headerDescription {
+        height: 2rem;
+        text-align: center;
+    }
+    .titleDescription {
+        font-size: 3vh;
+    }
+    .containerInfo {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+    }
+    .containerImgDescription {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 30%;
+        position: relative;
+        left:1.5rem;
+    }
+    .titleName {
+        display: flex;
+        font-size: 3vh;
+        width: 100%;
+    }
+    .info {
+        width: 80%;
+
+    }
+   /*  .contains{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        height: 200vh;
+        
+    }
+    .imagen {
+        width: 100%;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+    .headerDescription {
+        z-index: 1;
+        margin-bottom: 100rem;
+        position: fixed;
+    }
+    .titleDescription{
+        font-size: 1.3rem;
+        margin-top: .8rem;
+        
+    }
+    .info {
+        width: 90%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .date {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .containerInfo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: -30rem;
+    }
+    .containerImgDescription {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .platforms {
+        display: flex;
+        height: 1rem;
+        justify-content: center;
+        width: 90%;
+    }
+    .description {
+       
+        margin-top: 5rem;
+        font-size: 2vh;
+    }
+    .platform {
+        font-size: 2vh;
+        
+    }
+    .contenedorFooter {
+        display: none;
+    }
+     */
+    }

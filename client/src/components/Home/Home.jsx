@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import  "./Home.css"
 import {Link} from "react-router-dom";
-import {  getGenres } from "../actions";
+import {  getGenres } from "../../actions";
 import { connect } from "react-redux";
 
 

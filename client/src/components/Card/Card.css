@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Lato:wght@300&display=swap');
+
+
+.containerHome {
+    width: 100%;
+    height: 100vh;
+    
+}
+
+
+.contenedorCard {
+    width: 80%;
+    height: 30%;
+    margin: 2rem;
+    border-radius: 0.2rem;
+} 
+
+.contenedorImg {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    
+    
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color:rgb(63, 54, 87);
+    font-size: 0.9rem ;
+    height: 17rem;
+    border-radius: 0.2rem;
+    transition: transform 250ms, opacity 400ms;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color:rgb(90, 69, 138);
+    opacity: 1;
+}
+
+/* .border {
+  
+    border:8px solid #5c436b;
+} */
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top:0.2rem;
+    font-size: 85%;
+    color: #dddddd ;
+    font-family: "Lato", sans-serif;
+}
+
+.name { 
+    margin:0;
+    font-size: 0.9rem;
+    height: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.imgCard {
+    width: 100%;
+    height: 12rem;
+    border-radius: .2rem;
+}
+
+.wrapContainerCard {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
+    border-radius: 0.2rem;
+}
+
+.categoriesCard {
+    margin: 0;
+    color: rgb(160, 177, 177);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.containerBanner {
+    width: 100%;
+    max-height: 10px;
+}
+
+.containerFilter {
+    display: flex;
+    margin-top:27.3%;
+    justify-content: center;
+}
+
+.filter {
+    background: linear-gradient(to right, #00a8e0, #00a8e0);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 1s 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #00a8e0;
+    height: 6rem;
+    font-size: 1rem;
+    font-family: Amazon Ember Regular,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    color: #dddddd;
+    background-color: #392E5C;
+}
+
+
+.filter:hover{
+    background-size: 100% 100%;
+ }
+
+.filterTitle {
+    background: linear-gradient(to right, #00a8e0, #00a8e0);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 1s 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #392e5c;
+    height: 6rem;
+    font-size: 1rem;
+    font-family: Amazon Ember Regular,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    color: #dddddd;
+}
+/* .filterTitle {
+    padding: .75em;
+    border: 1px #ddd solid;
+    background: linear-gradient(to right, #eee, #eee);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 1s 0s;
+}
+ */
+.filterTitle:hover{
+   background-size: 100% 100%;
+}
+
+
+
+
+/* .buttonFilter {
+    height: 2rem;
+    width: 15%;
+    margin-top: .7rem;
+    outline: none;
+    border-color: transparent;
+} */
+
+.buttonsFilter {
+    display: flex;
+}
+
+.buttonFilter {
+    background-color: transparent;
+    outline: none;
+    border-color: transparent;
+    color: #dddddd;
+    font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #4F466A;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonFilter:hover {
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+select {
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-color: transparent;
+    outline: none;
+    width: 10rem;
+    height: 2rem;
+    border-color: transparent;
+}
+
+.filterTitleOne {
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #00a8e0;
+    height: 6rem;
+    font-size: 1rem;
+    font-family: Amazon Ember Regular,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    color: #dddddde5;
+}
+
+/* .containPagination {
+    display: flex;
+    width: 100%;
+    height: 17%;
+    position: relative;
+    background-color: #aebcbd;
+}
+ */
+.pagination {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    position: relative;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    background-color: rgb(44, 37, 65);
+}
+
+.botonesPagi {
+    width: 2rem;
+    margin: 0.2rem;
+    height: 1.5rem;
+    background-color:#392E5C;
+    outline: none;
+    border-color: transparent;
+    border-radius: 0.2rem;
+    color: #dddddd;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    transition: transform 250ms, opacity 400ms;
+}
+.filterCategories {
+    background-color: #3b3355;
+    color: #dddddd;
+    
+}
+
+.botonesPagi:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.previous {
+    background-color:#392E5C;
+    border-color: transparent;
+    color: #dddddd;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 7%;
+    border-radius: .2rem;
+    margin-left: 0.7rem;
+    transition: transform 250ms, opacity 400ms;
+    height: 1.8rem;
+}
+
+.previous:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.next:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.next {
+    background-color:#392E5C;
+    border-color: transparent;
+    color: #dddddd;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 7%;
+    border-radius: .2rem;
+    margin-right: 0.7rem;
+    transition: transform 250ms, opacity 400ms;
+    height: 1.8rem;
+}
+
+
+
+@media (max-width: 648px) {
+    .containerHome{
+        width: 100%;
+        height: fit-content;
+        margin:0;
+    }
+    .wrapContainerCard{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position:relative;
+        height: fit-content;
+    }
+    .contenedorCard{
+        display: flex;
+       /*  margin: 1rem 2rem 1rem 2rem; */
+    }
+    .containPagination {
+        position:relative;
+        margin-bottom: 7rem;
+    }
+    .card {
+        width: 99%;
+    }
+    .previous{
+        width: 15%;
+    }
+    .next {
+        width: 25%;
+    }
+    .containerFilter {
+        height: 10rem;
+        width: 100%;
+    }
+    .filterTitleOne {
+        align-items: center;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+        height: 8rem;
+        background:#392e5c;
+        width: 6rem;
+        
+    }
+    
+   
+    .buttonFilter {
+        font-size: 0.8rem;
+        height: 0.3rem;
+        width: 3rem;
+        background-color: transparent;
+    }
+    .filterTitle {
+        font-size: 0.9rem;
+        height: 8rem;
+        background:#392e5c;
+        font-weight: 600;
+        text-align: center;
+       
+    }
+    .filter {
+        background:#392e5c;
+        height: 8rem;
+        font-size: 0.9rem;
+        position: relative;
+        font-weight: 600;
+        align-items: center;
+        text-align: center;
+        right: 0.6rem;
+    }
+    
+    /* .select {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    } */
+     .filterCategories {
+        width: 4.2rem;
+        background-color: #392e5c;
+        margin-top: 0.7rem;
+        
+    } 
+}

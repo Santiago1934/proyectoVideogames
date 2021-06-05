@@ -11,7 +11,6 @@ var arr =[]
 server.get("/myGames", (req, res) => {
     Videogame.findAll().then((results) => {results.map(el => arr.push(el.dataValues))})
     .then(info => res.json(arr))
-    
 })
 
 
