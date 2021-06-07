@@ -106,6 +106,9 @@ export const Card = (props) => {
     handleVerificacion,
   ]);
 
+  
+ 
+
   const setPagination = (num, arr) => {
     while (num > 0) {
       arr.unshift(num);
@@ -265,12 +268,12 @@ export const Card = (props) => {
           <div className="pagination">
             {actualPage > 5 ? (
               <button
-                className="next"
+                className="previous"
                 onClick={() => {
                   actualPage > 5 ? setActualPage(actualPage - 5) : <></>;
                 }}
               >
-                previous
+                Previous
               </button>
             ) : (
               <></>
@@ -292,7 +295,7 @@ export const Card = (props) => {
                   actualPage <= 5 ? setActualPage(actualPage + 5) : <></>;
                 }}
               >
-                next
+               Next
               </button>
             ) : (
               <></>

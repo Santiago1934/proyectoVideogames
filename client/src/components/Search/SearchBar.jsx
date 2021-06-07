@@ -23,13 +23,17 @@ export function SearchBar (props) {
     Search(title);
   }
 
+  const handleRedir = () => {
+    window.location.href = "/";
+  } 
+
 
   
   return (
     <header className="headerSearch">
 
       <div className="containerTitle">
-        <Link className ="linkTitle "to="/"><h4>XGames</h4></Link>
+        <a href="/" className ="linkTitle "><h4>XGames</h4></a>
       </div> 
 
       <div className="containerSearch">

@@ -110,11 +110,11 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: .2px solid rgb(43, 42, 42);
     background-color: #00a8e0;
     height: 6rem;
     font-size: 1rem;
-    font-family: Amazon Ember Regular,Helvetica,Arial,sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 800;
     color: #dddddd;
     background-color: #392E5C;
@@ -134,11 +134,11 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: .2px solid rgb(43, 42, 42);
     background-color: #392e5c;
     height: 6rem;
     font-size: 1rem;
-    font-family: Amazon Ember Regular,Helvetica,Arial,sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 800;
     color: #dddddd;
 }
@@ -176,10 +176,12 @@
     border-color: transparent;
     color: #dddddd;
     font-size: 0.9rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
     cursor: pointer;
     background-color: #4F466A;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .select {
@@ -190,16 +192,20 @@
 
 .buttonFilter:hover {
     background-size: 100% 100%;
+    border: 1px solid black;
+    color: black;
+    transition: 500ms;
     background-color: transparent;
 }
 select {
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-color: transparent;
+    
     outline: none;
     width: 10rem;
     height: 2rem;
-    border-color: transparent;
+    
+    font-family: 'PT Sans', sans-serif;
+    border: none;
 }
 
 .filterTitleOne {
@@ -207,11 +213,10 @@ select {
    flex-direction: column;
    align-items: center;
     width: 100%;
-    border-bottom: 1px solid black;
     background-color: #00a8e0;
     height: 6rem;
     font-size: 1rem;
-    font-family: Amazon Ember Regular,Helvetica,Arial,sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 800;
     color: #dddddde5;
 }
@@ -232,19 +237,19 @@ select {
     justify-content: center;
     margin-top: 4rem;
     margin-bottom: 3rem;
-    background-color: rgb(44, 37, 65);
+    background-color: #392e5c;
 }
 
 .botonesPagi {
-    width: 2rem;
+    width: 3rem;
     margin: 0.2rem;
-    height: 1.5rem;
-    background-color:#392E5C;
+    height: 2rem;
+    background-color:#2C2541;
     outline: none;
     border-color: transparent;
-    border-radius: 0.2rem;
+    border-radius: 0.1rem;
     color: #dddddd;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     cursor: pointer;
     transition: transform 250ms, opacity 400ms;
 }
@@ -260,15 +265,17 @@ select {
 }
 
 .previous {
-    background-color:#392E5C;
+    background-color:#2C2541;
     border-color: transparent;
     color: #dddddd;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 7%;
-    border-radius: .2rem;
+    border-radius: .1rem;
+    margin-top: 0.2rem;
     margin-left: 0.7rem;
     transition: transform 250ms, opacity 400ms;
-    height: 1.8rem;
+    height: 2rem;
+    font-family: 'PT Sans', sans-serif;
+
 }
 
 .previous:hover{
@@ -281,17 +288,7 @@ select {
     opacity: 1;
 }
 
-.next {
-    background-color:#392E5C;
-    border-color: transparent;
-    color: #dddddd;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 7%;
-    border-radius: .2rem;
-    margin-right: 0.7rem;
-    transition: transform 250ms, opacity 400ms;
-    height: 1.8rem;
-}
+
 
 
 
