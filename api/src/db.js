@@ -12,7 +12,8 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
         host: DB_HOST,
         port: 5432,
         username: DB_USER,
-        password: DB_PASSWORD,
+        password: a684cd46ba2952c61fbb68356224315de38b5b758049fd7566c99ae9769a6fc3,
+        
         pool: {
           max: 3,
           min: 1,
