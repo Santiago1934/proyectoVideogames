@@ -4,12 +4,12 @@ const {API_KEY} = process.env;
 
 const Home = (req, res) => {
     if(req.query.search){
-    axios.get(`https://api.rawg.io/api/games?search=${req.query.search}&key=${API_KEY}`)
+    axios.get(`http://api.rawg.io/api/games?search=${req.query.search}&key=${API_KEY}`)
     .then( data => data)
     .then(response => res.send(response.data))
     }
     else {
-    axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`)
+    axios.get(`http://api.rawg.io/api/games?key=${API_KEY}`)
     .then( data => data)
     .then(response => res.send(response.data))
     }
