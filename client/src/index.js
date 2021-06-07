@@ -8,11 +8,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import dotenv from "dotenv"
 import axios from 'axios';
+
 dotenv.config()
 
 axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
-fetch.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
-
+/* fetch.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
+ */
 ReactDOM.render(
   <Provider store={store}>
   <BrowserRouter>
