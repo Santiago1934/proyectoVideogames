@@ -22,7 +22,7 @@ server.get("/:id", (req, res) => {
         
     }
     else {
-    axios.get(`https://api.rawg.io/api/games/${req.params.id}?key=${API_KEY}`)
+    axios.get(`https://api.rawg.io/api/games/${req.params.id}?key=097ff575730244b2b1af092c8547e8f1`)
     .then( data => data)
     .then(response => {
                        obj.name = response.data.name

@@ -11,7 +11,7 @@ const idKey = () => id = id + 1;
 
 server.get("/genres", (req, res) => {
   if(flag === true) {
-    axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)
+    axios.get(`https://api.rawg.io/api/genres?key=097ff575730244b2b1af092c8547e8f1`)
     .then(data => data)
     .then(info => info.data.results.map( el =>
       Genre.create({
