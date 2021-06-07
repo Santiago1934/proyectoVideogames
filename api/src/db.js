@@ -11,8 +11,8 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
         dialect: "postgres",
         host: DB_HOST,
         port: 5432,
-        username: DB_PASSWORD,
-        password: DB_PASSWORD,
+        username: DB_USER,
+        password: DB_PASSWORD + "3",
         pool: {
           max: 3,
           min: 1,
@@ -51,6 +51,7 @@ let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
 
+// En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
 const { Videogame, Genre } = sequelize.models;
 
