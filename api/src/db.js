@@ -11,8 +11,8 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
         dialect: "postgres",
         host: DB_HOST,
         port: 5432,
-        username: "queloke",
-        password: DB_PASSWORD,
+        username: DB_USER,
+        password: console.log(DB_PASSWORD),
         pool: {
           max: 3,
           min: 1,
