@@ -27,6 +27,6 @@ conn.sync({ force: true }).then(() => {
   });
 });
 
-app.listen(process.env.PORT || 3001, function(){
+/* app.listen(process.env.PORT || 3001, function(){
   console.log("Express server listening on port %d in %s mode", "USER: ", DB_USER, "PASS:" + DB_PASSWORD, "NAME:" + DB_NAME, "HOST:" + DB_HOST);
-});
+}); */
