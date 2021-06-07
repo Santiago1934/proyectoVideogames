@@ -91,8 +91,8 @@ export const getSearchGame = (titulo) => {
 
 export const getDescription = (id) => {
     return function(dispatch) {
-      return fetch(`/videogames/${id}`) 
-        .then(response => response.json())
+      return axios.get(`/videogames/${id}`) 
+        .then(response => response.data)
         .then(game => { 
             dispatch({ type: "GET_GAME_DETAIL", payload: game});
         });
