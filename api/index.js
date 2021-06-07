@@ -19,11 +19,14 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const  { conn } = require('./src/db.js');
-
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.PORT, () => {
-    console.log("%s listening at 3001"); // eslint-disable-line no-console
+  server.listen(process.env.PORT || 3001, () => {
+    console.log("%s listening at 3001", ); // eslint-disable-line no-console
   });
 });
 
+app.listen(process.env.PORT || 3001, function(){
+  console.log("Express server listening on port %d in %s mode", "USER: ", DB_USER, "PASS:" + DB_PASSWORD, "NAME:" + DB_NAME, "HOST:" + DB_HOST);
+});
