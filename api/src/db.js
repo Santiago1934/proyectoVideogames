@@ -19,14 +19,14 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
           idle: 10000,
         },
         dialectOptions: {
-         /*  ssl: {
+          ssl: {
             require: true,
             // Ref.: https://github.com/brianc/node-postgres/issues/2009
             rejectUnauthorized: false,
-          }, */
+          },
           keepAlive: true,
         },
-       /*  ssl: true, */
+        ssl: true,
       })
     :  new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:5432/videogames`, {
   logging: false, // set to console.log to see the raw SQL queries
