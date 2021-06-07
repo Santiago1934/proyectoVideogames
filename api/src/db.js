@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
-export let sequelize =
+ let sequelize =
   process.env.NODE_ENV === "production"
     ? new Sequelize({
         database: DB_NAME,
@@ -63,6 +63,7 @@ Genre.belongsToMany(Videogame, { through: 'genregame'});
 
 
 module.exports = {
+  sequelize,
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
 };
